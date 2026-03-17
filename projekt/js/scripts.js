@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Dark mode toggle (dodatni feature za bodove)
     initDarkMode();
+    
+    // Contact form initialization
+    initContactForm();
 });
 
 /**
@@ -237,4 +240,54 @@ function initGalleryModal() {
 }
 
 console.log('✓ Scripts.js učitan i inicijaliziran');
+
+/**
+ * Kontakt obrazac: validacija i notifikacije (klijent-side)
+ */
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    const alertWrap = document.getElementById('contactAlert');
+    if (!form || !alertWrap) return;
+
+    function showAlert(message, type = 'success') {
+        alertWrap.innerHTML = `\n+            <div class="alert alert-${type} alert-dismissible fade show" role="alert">\n+                ${message}\n+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>\n+            </div>`;
+        // auto dismiss after 4 seconds
+        setTimeout(() => {
+            const bsAlertEl = alertWrap.querySelector('.alert');
+            if (bsAlertEl) {
+                const alert = bootstrap.Alert.getOrCreateInstance(bsAlertEl);
+                alert.close();
+            }
+        }, 4000);
+    }
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = (document.getElementById('contactEmail') || {}).value || '';
+        const subject = (document.getElementById('contactSubject') || {}).value || '';
+        const message = (document.getElementById('contactMessage') || {}).value || '';
+
+        // Trim values
+        const emailTrim = email.trim();
+        const subjectTrim = subject.trim();
+        const messageTrim = message.trim();
+
+        // Validate
+        if (!emailTrim || !subjectTrim || !messageTrim || !isValidEmail(emailTrim)) {
+            // Do NOT show success if validation fails
+            showAlert('Molimo ispunite sva polja ispravno prije slanja.', 'danger');
+            return;
+        }
+
+        // All fields valid — show success notification
+        showAlert('Poruka je uspješno poslana! Hvala na javljanju.', 'success');
+
+        // Clear form
+        form.reset();
+    });
+}
 
