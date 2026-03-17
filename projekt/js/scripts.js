@@ -250,7 +250,7 @@ function initContactForm() {
     if (!form || !alertWrap) return;
 
     function showAlert(message, type = 'success') {
-        alertWrap.innerHTML = `\n+            <div class="alert alert-${type} alert-dismissible fade show" role="alert">\n+                ${message}\n+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>\n+            </div>`;
+        alertWrap.innerHTML = `\n            <div class="alert alert-${type} alert-dismissible fade show" role="alert">\n                ${message}\n                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>\n            </div>`;
         // auto dismiss after 4 seconds
         setTimeout(() => {
             const bsAlertEl = alertWrap.querySelector('.alert');

@@ -22,7 +22,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 text-center mb-4 mb-lg-0" data-aos="zoom-in">
-                    <img src="images/f2.jpg" class="profile-img-large rounded-circle shadow-lg" alt="Lana Gale">
+                    <a href="images/f2.jpg" data-lightbox="profile" data-title="Lana Gale">
+                        <img src="images/f2.jpg" class="profile-img-large rounded-circle shadow-lg" alt="Lana Gale">
+                    </a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
                     <h1 class="display-5 fw-bold text-white mb-3">Lana Gale</h1>
@@ -55,6 +57,53 @@
                         <p><strong>Osnovna škola:</strong> <a href="https://os-agmatos-vk.skole.hr/" target="_blank">OŠ "Antun Gustav Matoš" (2012-2019)</a></p>
                         <p><strong>Srednja škola:</strong> <a href="https://gimnazijavk.hr/" target="_blank">Gimnazija Matije Antuna Reljkovića Vinkovci (2019-2023)</a></p>
                         <p><strong>Fakultet:</strong> <a href="https://www.ferit.unios.hr/" target="_blank">FERIT - Sveučilište Osijek (2023-sadašnjost)</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="mb-5">
+                <div class="card card-section">
+                    <div class="card-header bg-info text-white"><h3 class="mb-0"><i class="fas fa-code-branch"></i> Projekti</h3></div>
+                    <div class="card-body">
+                        <div class="project-item mb-4">
+                            <h5 class="project-title"><i class="fas fa-calculator"></i> Finance-manager</h5>
+                            <p class="project-description">Alat za vođenje osobnih financija razvijen kroz vježbe i laboratorijske zadatke. Sadrži module za unos prihoda i rashoda, kategorizaciju troškova te jednostavno izvještavanje. Implementirana varijanta u C za osnovnu CLI funkcionalnost te proširena verzija u Pythonu za vizualizaciju i dodatne analize.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-dark">C</span>
+                                <span class="badge bg-success">Python</span>
+                                <span class="badge bg-secondary">CLI</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item mb-4">
+                            <h5 class="project-title"><i class="fas fa-brain"></i> Emotion-Detector-strojno2025</h5>
+                            <p class="project-description">Projekt strojnog učenja za prepoznavanje emocija iz teksta/govora. Model treniran u Pythonu koristeći biblioteke za obradu prirodnog jezika i jednostavno sučelje za testiranje na uzorcima.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-success">Python</span>
+                                <span class="badge bg-info">NLP</span>
+                                <span class="badge bg-warning text-dark">Machine Learning</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item mb-4">
+                            <h5 class="project-title"><i class="fas fa-folder-open"></i> Portfolio</h5>
+                            <p class="project-description">Osobni portfolio web-sajt izrađen pomoću PHP-a i standardnog HTML/CSS sučelja. Sadrži primjere radova, kontakt obrazac i responzivan dizajn prilagođen mobilnim uređajima.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-secondary">PHP</span>
+                                <span class="badge bg-dark">Responsive</span>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <h5 class="project-title"><i class="fas fa-utensils"></i> Glowolt (Django Food-Ordering App)</h5>
+                            <p class="project-description">Aplikacija za naručivanje hrane izrađena u Django okviru. Sadrži katalog jela, proces narudžbe, upravljanje korisnicima i administracijsko sučelje za upravljanje ponudom. Dizajn je prilagođen modernom UI-ju i integriran tako da vizualno odgovara profilu kao kod kolege.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-success">Django</span>
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-info">HTML</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -107,14 +156,14 @@
 
             <section id="slike" class="mb-5">
                 <div class="card card-section">
-                    <div class="card-header bg-purple text-white"><h3 class="mb-0"><i class="fas fa-images"></i> Galerija - Različiti Formati (4+ formata)</h3></div>
+                    <div class="card-header bg-purple text-white"><h3 class="mb-0"><i class="fas fa-images"></i> Galerija - Slike projekata (4+ formata)</h3></div>
                     <div class="card-body">
                         <p class="text-muted mb-4">Kliknite za veću rezoluciju</p>
                         <div class="row g-3">
-                            <div class="col-md-6 col-lg-3"><a href="images/gallery-1.jpg" data-lightbox="gallery" data-title="JPG"><div class="gallery-item"><img src="images/gallery-1.jpg" class="img-fluid rounded" alt="JPG"><div class="overlay">JPG</div></div></a></div>
-                            <div class="col-md-6 col-lg-3"><a href="images/gallery-2.png" data-lightbox="gallery" data-title="PNG"><div class="gallery-item"><img src="images/gallery-2.png" class="img-fluid rounded" alt="PNG"><div class="overlay">PNG</div></div></a></div>
-                            <div class="col-md-6 col-lg-3"><a href="images/gallery-3.gif" data-lightbox="gallery" data-title="GIF"><div class="gallery-item"><img src="images/gallery-3.gif" class="img-fluid rounded" alt="GIF"><div class="overlay">GIF</div></div></a></div>
-                            <div class="col-md-6 col-lg-3"><a href="images/gallery-4.avif" data-lightbox="gallery" data-title="AVIF"><div class="gallery-item"><img src="images/gallery-4.avif" class="img-fluid rounded" alt="AVIF"><div class="overlay">AVIF</div></div></a></div>
+                            <div class="col-md-6 col-lg-3"><a href="images/4.jpg" data-lightbox="gallery" data-title="JPG"><div class="gallery-item"><img src="images/4.jpg" class="img-fluid rounded" alt="JPG"><div class="overlay">JPG</div></div></a></div>
+                            <div class="col-md-6 col-lg-3"><a href="images/3.png" data-lightbox="gallery" data-title="PNG"><div class="gallery-item"><img src="images/3.png" class="img-fluid rounded" alt="PNG"><div class="overlay">PNG</div></div></a></div>
+                            <div class="col-md-6 col-lg-3"><a href="images/8.gif" data-lightbox="gallery" data-title="GIF"><div class="gallery-item"><img src="images/8.gif" class="img-fluid rounded" alt="GIF"><div class="overlay">GIF</div></div></a></div>
+                            <div class="col-md-6 col-lg-3"><a href="images/glowolt.avif" data-lightbox="gallery" data-title="AVIF"><div class="gallery-item"><img src="images/glowolt.avif" class="img-fluid rounded" alt="AVIF"><div class="overlay">AVIF</div></div></a></div>
                         </div>
                     </div>
                 </div>
@@ -136,7 +185,7 @@
 
     <footer class="bg-dark text-white py-5 mt-5">
         <div class="container">
-            <p>Web stranica izrađena u sklopu kolegija <strong>Multimedijska Tehnika</strong> na <a href="https://www.ferit.unios.hr/" target="_blank" class="text-info">FERIT-u Osijek</a>.</p>
+            <p>Web stranica izrađena u sklopu kolegija <a href="https://www.ferit.unios.hr/upisi-i-studiji/strucni-prijediplomski-studiji#racunarstvo#SR6-02" target="_blank" class="text-info">Multimedijska Tehnika</a> na <a href="https://www.ferit.unios.hr/" target="_blank" class="text-info">FERIT-u Osijek</a>.</p>
             <p class="mb-0">&copy; 2026 Lana Gale | FERIT Osijek</p>
         </div>
     </footer>
