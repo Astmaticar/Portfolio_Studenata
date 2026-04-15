@@ -503,8 +503,19 @@ body[data-student] #slike .card-header {
     color: #1a1a2e !important;
 }
 
-[data-bs-theme="dark"] #students .section-title {
+/* ========== NASLOVI U DARK MODU - SAMO NA SEKCIJAMA BEZ BG-LIGHT ========== */
+[data-bs-theme="dark"] #students .section-title,
+[data-bs-theme="dark"] #fakultet .section-title {
     color: #ffffff !important;
+}
+
+/* ========== BG-LIGHT SEKCIJE U DARK MODU - DRŽE SVIJETLU POZADINU I TAMNE NASLOVE ========== */
+[data-bs-theme="dark"] .bg-light {
+    background-color: #f8f9fa !important;
+}
+
+[data-bs-theme="dark"] .bg-light .section-title {
+    color: #1a1a2e !important;
 }
 
 /* ========== STUDENTI KARTICA - TEKSTOVI UVIJEK CRNI ========== */
@@ -555,4 +566,49 @@ body[data-bs-theme="dark"][data-student="dorijan"] .profile-hero p {
 
 body[data-bs-theme="dark"] .project-title {
     color: #ffffff !important;
+}
+
+/* ========== INFO-BOX BG-PRIMARY TEXT COLOR IN DARK MODE ========== */
+[data-bs-theme="dark"] .info-box.bg-primary h4,
+[data-bs-theme="dark"] .info-box.bg-primary p,
+[data-bs-theme="dark"] .info-box.bg-primary li {
+    color: #ffffff !important;
+}
+
+/* ========== SKILL LABELS IN DARK MODE ========== */
+[data-bs-theme="dark"] .skill-item label {
+    color: #f0f0f0 !important;
+}
+
+/* ========== EDUCATION ITEM BACKGROUND IN DARK MODE ========== */
+[data-bs-theme="dark"] .education-item {
+    background: #2a2a3e !important;
+    border-left-color: var(--info-color) !important;
+}
+
+[data-bs-theme="dark"] .education-item h5 {
+    color: var(--info-color) !important;
+}
+
+/* ========== AUDIO PLAYER BACKGROUND IN DARK MODE ========== */
+[data-bs-theme="dark"] .audio-player {
+    background: #2a2a3e !important;
+}
+
+/* ========== PROGRESS BAR BACKGROUND IN DARK MODE ========== */
+[data-bs-theme="dark"] .progress {
+    background-color: #2a2a3e !important;
+}
+
+/* ========== FEATURE BOX IN DARK MODE ========== */
+[data-bs-theme="dark"] .feature-box {
+    background: #2a2a3e !important;
+}
+
+[data-bs-theme="dark"] .feature-box h5 {
+    color: #f0f0f0 !important;
+}
+
+[data-bs-theme="dark"] .feature-box p {
+    color: #d0d0d0 !important;
 }
