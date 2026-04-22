@@ -9,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/student1.css">
 </head>
 <body data-student="lana">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
@@ -110,22 +111,73 @@
 
             <section id="skills" class="mb-5">
                 <div class="card card-section">
-                    <div class="card-header bg-warning text-dark"><h3 class="mb-0"><i class="fas fa-laptop-code"></i> Računalne Vještine</h3></div>
+                    <div class="card-header bg-warning text-dark"><h3 class="mb-0"><i class="fas fa-toolbox"></i> Vještine & Znanja</h3></div>
                     <div class="card-body">
-                        <p><strong>HTML5</strong> <span class="badge bg-primary">95%</span></p>
-                        <div class="progress mb-3"><div class="progress-bar" style="width:95%"></div></div>
-                        
-                        <p><strong>CSS3</strong> <span class="badge bg-primary">90%</span></p>
-                        <div class="progress mb-3"><div class="progress-bar" style="width:90%"></div></div>
-                        
-                        <p><strong>JavaScript</strong> <span class="badge bg-success">80%</span></p>
-                        <div class="progress mb-3"><div class="progress-bar bg-success" style="width:80%"></div></div>
-                        
-                        <p><strong>React.js</strong> <span class="badge bg-info">75%</span></p>
-                        <div class="progress mb-3"><div class="progress-bar bg-info" style="width:75%"></div></div>
-
-                        <p><strong>Figma & UI/UX</strong> <span class="badge bg-danger">85%</span></p>
-                        <div class="progress"><div class="progress-bar bg-danger" style="width:85%"></div></div>
+                        <div class="row g-3">
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-code fa-2x text-primary mb-2"></i>
+                                    <h6>HTML5</h6>
+                                    <small class="text-muted">Napredna</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-palette fa-2x text-danger mb-2"></i>
+                                    <h6>CSS3</h6>
+                                    <small class="text-muted">Napredna</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-fire fa-2x text-warning mb-2"></i>
+                                    <h6>JavaScript</h6>
+                                    <small class="text-muted">Srednja</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-cube fa-2x text-info mb-2"></i>
+                                    <h6>React.js</h6>
+                                    <small class="text-muted">Srednja</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-brush fa-2x mb-2" style="color: #a259ff;"></i>
+                                    <h6>Figma</h6>
+                                    <small class="text-muted">Napredna</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-pencil-ruler fa-2x text-secondary mb-2"></i>
+                                    <h6>UI/UX Design</h6>
+                                    <small class="text-muted">Srednja</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-code-branch fa-2x text-danger mb-2"></i>
+                                    <h6>Git</h6>
+                                    <small class="text-muted">Srednja</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-mobile-alt fa-2x text-primary mb-2"></i>
+                                    <h6>Responsive Design</h6>
+                                    <small class="text-muted">Napredna</small>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="skill-box text-center">
+                                    <i class="fas fa-globe fa-2x text-success mb-2"></i>
+                                    <h6>Bootstrap</h6>
+                                    <small class="text-muted">Srednja</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -173,9 +225,49 @@
                 <div class="card card-section">
                     <div class="card-header bg-info text-white"><h3 class="mb-0"><i class="fas fa-people-group"></i> Moji Kolege</h3></div>
                     <div class="card-body">
-                        <p>Pogledajte profil mojih kolega:</p>
-                        <div class="row">
-                            <div class="col-md-6"><div class="card"><div class="card-body text-center"><h5 class="card-title">Dorijan Dragić</h5><p class="text-muted">Junior Full-Stack developer</p><a href="student2.html" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a></div></div></div>
+                        <div class="colleagues-carousel">
+                            <button class="carousel-btn carousel-btn-left" id="colleaguesLeftBtn"><i class="fas fa-chevron-left"></i></button>
+                            <div class="carousel-container">
+                                <div class="carousel-track" id="colleaguesTrack">
+                                    <div class="colleague-item">
+                                        <div class="card h-100">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Dorijan Dragić</h5>
+                                                <p class="text-muted">Junior Full-Stack developer</p>
+                                                <a href="student2.html" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="colleague-item">
+                                        <div class="card h-100">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Dominik Dejak</h5>
+                                                <p class="text-muted">Student FERIT-a</p>
+                                                <a href="https://mt-webprojekt.onrender.com/student/4/" target="_blank" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="colleague-item">
+                                        <div class="card h-100">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Mislav Dorinka</h5>
+                                                <p class="text-muted">Student FERIT-a</p>
+                                                <a href="https://mt-webprojekt.onrender.com/student/3/" target="_blank" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="colleague-item">
+                                        <div class="card h-100">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Matija Cikojević</h5>
+                                                <p class="text-muted">Student FERIT-a</p>
+                                                <a href="https://webbiography.onrender.com/MatijaCik/" target="_blank" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-btn carousel-btn-right" id="colleaguesRightBtn"><i class="fas fa-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -194,5 +286,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/scripts.js"></script>
+    
+    <script>
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('colleaguesTrack');
+            const leftBtn = document.getElementById('colleaguesLeftBtn');
+            const rightBtn = document.getElementById('colleaguesRightBtn');
+            
+            if (!track || !leftBtn || !rightBtn) return;
+            
+            const items = track.querySelectorAll('.colleague-item');
+            let currentIndex = 0;
+            const itemsToShow = 2;
+            const itemWidth = 50; // percentage
+            
+            // Clone items for infinite loop
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                track.appendChild(clone);
+            });
+            
+            function updateCarousel() {
+                const translateX = -currentIndex * itemWidth;
+                track.style.transform = `translateX(${translateX}%)`;
+            }
+            
+            function moveNext() {
+                currentIndex += itemsToShow;
+                if (currentIndex >= items.length) {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            }
+            
+            function movePrev() {
+                currentIndex -= itemsToShow;
+                if (currentIndex < 0) {
+                    currentIndex = items.length - itemsToShow;
+                }
+                updateCarousel();
+            }
+            
+            rightBtn.addEventListener('click', moveNext);
+            leftBtn.addEventListener('click', movePrev);
+        });
+    </script>
 </body>
 </html>

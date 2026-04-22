@@ -224,9 +224,49 @@
                 <div class="card card-section">
                     <div class="card-header bg-info text-white"><h3 class="mb-0"><i class="fas fa-people-group"></i> Moji Kolege</h3></div>
                     <div class="card-body">
-                        <p>Pogledajte profil mojih kolega:</p>
-                        <div class="row">
-                            <div class="col-md-6"><div class="card"><div class="card-body text-center"><h5 class="card-title">Lana Gale</h5><p class="text-muted">Frontend Developer & UX/UI Designer</p><a href="student1.html" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a></div></div></div>
+                        <div class="colleagues-carousel">
+                            <button class="carousel-btn carousel-btn-left" id="colleaguesLeftBtn"><i class="fas fa-chevron-left"></i></button>
+                            <div class="carousel-container">
+                                <div class="carousel-track" id="colleaguesTrack">
+                                    <div class="colleague-item">
+                                        <div class="card h-100">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Lana Gale</h5>
+                                                <p class="text-muted">Frontend Developer & UX/UI Designer</p>
+                                                <a href="student1.html" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="colleague-item">
+                                        <div class="card h-100">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Dominik Dejak</h5>
+                                                <p class="text-muted">Student FERIT-a</p>
+                                                <a href="https://mt-webprojekt.onrender.com/student/4/" target="_blank" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="colleague-item">
+                                        <div class="card h-100">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Mislav Dorinka</h5>
+                                                <p class="text-muted">Student FERIT-a</p>
+                                                <a href="https://mt-webprojekt.onrender.com/student/3/" target="_blank" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="colleague-item">
+                                        <div class="card h-100">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title">Matija Cikojević</h5>
+                                                <p class="text-muted">Student FERIT-a</p>
+                                                <a href="https://webbiography.onrender.com/MatijaCik/" target="_blank" class="btn btn-primary btn-sm">Pogledaj Profil <i class="fas fa-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-btn carousel-btn-right" id="colleaguesRightBtn"><i class="fas fa-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -245,5 +285,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/scripts.js"></script>
+    
+    <script>
+        // Carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('colleaguesTrack');
+            const leftBtn = document.getElementById('colleaguesLeftBtn');
+            const rightBtn = document.getElementById('colleaguesRightBtn');
+            
+            if (!track || !leftBtn || !rightBtn) return;
+            
+            const items = track.querySelectorAll('.colleague-item');
+            let currentIndex = 0;
+            const itemsToShow = 2;
+            const itemWidth = 50; // percentage
+            
+            // Clone items for infinite loop
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                track.appendChild(clone);
+            });
+            
+            function updateCarousel() {
+                const translateX = -currentIndex * itemWidth;
+                track.style.transform = `translateX(${translateX}%)`;
+            }
+            
+            function moveNext() {
+                currentIndex += itemsToShow;
+                if (currentIndex >= items.length) {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            }
+            
+            function movePrev() {
+                currentIndex -= itemsToShow;
+                if (currentIndex < 0) {
+                    currentIndex = items.length - itemsToShow;
+                }
+                updateCarousel();
+            }
+            
+            rightBtn.addEventListener('click', moveNext);
+            leftBtn.addEventListener('click', movePrev);
+        });
+    </script>
 </body>
 </html>

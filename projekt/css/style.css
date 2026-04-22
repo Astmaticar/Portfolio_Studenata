@@ -250,6 +250,47 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 
+/* ========== SKILL BOX ========== */
+.skill-box {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    height: 100%;
+}
+
+.skill-box:hover {
+    background: #e7f1ff;
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+}
+
+.skill-box h6 {
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.skill-box small {
+    font-size: 0.85rem;
+}
+
+[data-bs-theme="dark"] .skill-box {
+    background: #2a2a3e;
+    border-color: transparent;
+}
+
+[data-bs-theme="dark"] .skill-box:hover {
+    background: #3a3a5e;
+    border-color: var(--info-color);
+}
+
+[data-bs-theme="dark"] .skill-box h6 {
+    color: #ffffff;
+}
+
 /* ========== VJEŠTINE ========== */
 .skill-item {
     padding: 10px 0;
@@ -565,6 +606,14 @@ body[data-bs-theme="dark"][data-student="dorijan"] .profile-hero p {
 }
 
 body[data-bs-theme="dark"] .project-title {
+    color: #ffffff !important;
+}
+
+/* ========== INFO-BOX BG-PRIMARY - UVIJEK BIJELI TEKST ========== */
+.info-box.bg-primary h4,
+.info-box.bg-primary p,
+.info-box.bg-primary li,
+.info-box.bg-primary i {
     color: #ffffff !important;
 }
 
